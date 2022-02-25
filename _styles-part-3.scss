@@ -1,0 +1,59 @@
+@import './variables';
+
+/*Part 3 - Social Media Buttons*/
+.part-3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 60px;
+        height: 50px;
+        transition: width 350ms ease-in-out;
+        &:hover {
+            width: 250px;
+        }
+        & a {
+            position: relative;
+            color: $color-white;
+            font-size: 14px;
+            font-weight: $font-weight-regular;
+            opacity: 0%;
+            transition: opacity 350ms ease-in-out;
+            text-align: center;
+        }
+        &:hover a {
+            opacity: 100%;
+        }
+        & img {
+            display: block;
+            position: absolute;
+            transition: transform 350ms ease-in-out;
+        }
+        &:hover img {
+            transform: translateX(-100px);
+        }
+        &--blog {
+            background-color: $color-salmon;
+        }
+        &--twitter {
+            background-color: $color-light-blue;
+        }
+        &--linkedin {
+            background-color: $color-medium-blue;
+        }
+        &--facebook {
+            background-color: $color-darker-blue;
+        }
+        &--github {
+            background-color: $color-darker-grey;
+        }
+    }
+}
+
+

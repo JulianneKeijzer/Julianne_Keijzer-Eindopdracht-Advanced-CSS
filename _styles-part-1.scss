@@ -1,0 +1,98 @@
+@import './variables';
+
+/*Part 1 - Testimonial*/
+.part-1 {
+    margin: 10px;
+    max-width: 290px;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 15px 30px 0px $color-dark-gray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__text-1 {
+        background-color: $color-white;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        width: 100%;
+        & p {
+            color: $color-dark-gray;
+            font-size: 13px;
+            padding: 50px 35px 70px 35px;
+            line-height: 30px;
+            font-weight: $font-weight-medium;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 245px;
+        left: 90px;
+        & img {
+            width: 100px;
+            border-radius: 50%;
+            background-color: $color-white;
+            padding: 5px;
+        }
+    }
+    &__text-2 {
+        background-color: $color-purple;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 100%;
+        font-weight: $font-weight-medium;
+        & h2 {
+            text-transform: uppercase;
+            padding: 70px 0 0 0;
+            text-align: center;
+            font-size: 13px;
+            color: $color-white;
+            letter-spacing: 3px;
+            font-weight: $font-weight-medium;
+        }
+        & h3 {
+            padding: 10px 0 35px 0;
+            text-align: center;
+            font-size: 11px;
+            color: $color-medium-gray;
+            letter-spacing: 1.5px;
+            font-weight: $font-weight-medium;
+        }
+    }
+}
+
+/*Media Queries*/
+@media (min-width: 768px) {
+    .part-1 {
+        margin: 30px;
+        max-width: 700px;
+        &__text-1 {
+            & p {
+                color: $color-dark-gray;
+                font-size: 34px;
+                padding: 75px 70px 135px 70px;
+                line-height: 60px;
+            }
+        }
+        &__img {
+            top: 470px;
+            left: 245px;
+            display: block;
+            & img {
+                width: 190px;
+                padding: 7px;
+            }
+        }
+        &__text-2 {
+            & h2 {
+                padding: 127px 0 0 0;
+                font-size: 32px;
+                letter-spacing: 4px;
+            }
+            & h3 {
+                padding: 17px 0 68px 0;
+                font-size: 26px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
